@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image:linear-gradient(green,violet);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #container{
+           position: absolute;
+            width: 300px;
+            height: 450px;
+            background-color:transparent;
+            border: 5px black solid;
+            border-radius: 5px ;
+            
+            
+        }
+        h1{
+            font-size: 100px;
+            position: relative;
+            right: 150px;
+            padding-left: ;
+        }
+        #a{
+            color: rgb(204, 0, 255);
+            text-shadow: 5px 5px 5px rgb(34, 80, 178),10px 10px 10px violet;
+        }
+        #b{
+            color: rgb(204, 0, 255);
+            text-shadow: 5px 5px 5px rgb(34, 80, 178),10px 10px 10px violet;
+            
+        }
+        #display{
+            width: 250px;
+            height: 50px;
+            position: relative;
+            top: 30px;
+            left: 16px;
+            font-size: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 2px  solid black;
+            border-radius: 5px;
+            color: black;
+            box-shadow: 2px 2px 5px black;
+            text-shadow: 5px 5px 5px rgb(80, 98, 255);
+         
+        }
+        input{
+            width: 50px;
+            height: 50px;
+            position: relative;
+            top: 30px;
+            left: 45px;
+            font-size: 30px;
+            border-radius: 20px 20% 20px 20%;
+            text-shadow: 2px 2px 2px cyan;
+            box-shadow: 2px 2px 5px black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="a">Cal</h1>
+    <h1 id="b">Culator</h1>
+    <div id="container">
+        <form name="calc">
+            <input id="display" name="Answer">
+            <br><br>
+            <input type="button" value="1" onclick="Answer.value+='1'">
+            <input type="button" value="2" onclick="Answer.value+='2'">
+            <input type="button" value="3" onclick="Answer.value+='3'">
+            <input class="plus" type="button" value="+" onclick="Answer.value+='+'">
+            <br><br>
+            <input type="button" value="4" onclick="Answer.value+='4'">
+            <input type="button" value="5" onclick="Answer.value+='5'">
+            <input type="button" value="6" onclick="Answer.value+='6'">
+            <input class="plus"  type="button" value="-" onclick="Answer.value+='-'">
+            <br><br>
+            <input type="button" value="7" onclick="Answer.value+='7'">
+            <input type="button" value="8" onclick="Answer.value+='8'">
+            <input type="button" value="9" onclick="Answer.value+='9'">
+            <input class="plus" type="button" value="*" onclick="Answer.value+='*'">
+            <br><br>
+            <input type="button" value="/" onclick="Answer.value+='/'">
+            <input type="button" value="0" onclick="Answer.value+='0'">
+            <input type="button" value="." onclick="Answer.value+='.'">
+            <input class="plus" type="button" value="%" onclick="Answer.value+='%'">
+            <br><br>
+            <input id="clear" type="button" value="AC" onclick="Answer.value=''">
+            <input id="equal" type="button" value="=" onclick="Answer.value=eval(Answer.value)">
+            <input type="button" id="back" value="X" 
+                    onclick="Answer.value = Answer.value.toString().slice(0,-1)">
+        
+        </form>
+    </div>
+
+
+
+    <script>
+        /*
+        <h1 id="a">Cal</h1>
+    <h1 id="b">Culator</h1>
+    <div id="container">
+        <form name="calc">
+            <input id="display" name="Answer">
+            <br><br>
+            <input type="button" value="1" onclick="calc.Answer.value+='1'">
+            <input type="button" value="2" onclick="calc.Answer.value+='2'">
+            <input type="button" value="3" onclick="calc.Answer.value+='3'">
+            <input class="plus" type="button" value="+" onclick="calc.Answer.value+='+'">
+            <br><br>
+            <input type="button" value="4" onclick="calc.Answer.value+='4'">
+            <input type="button" value="5" onclick="calc.Answer.value+='5'">
+            <input type="button" value="6" onclick="calc.Answer.value+='6'">
+            <input class="plus"  type="button" value="-" onclick="calc.Answer.value+='-'">
+            <br><br>
+            <input type="button" value="7" onclick="calc.Answer.value+='7'">
+            <input type="button" value="8" onclick="calc.Answer.value+='8'">
+            <input type="button" value="9" onclick="calc.Answer.value+='9'">
+            <input class="plus" type="button" value="*" onclick="calc.Answer.value+='*'">
+            <br><br>
+            <input type="button" value="/" onclick="calc.Answer.value+='/'">
+            <input type="button" value="0" onclick="calc.Answer.value+='0'">
+            <input type="button" value="." onclick="calc.Answer.value+='.'">
+            <input class="plus" type="button" value="%" onclick="calc.Answer.value+='%'">
+            <br><br>
+            <input id="clear" type="button" value="AC" onclick="calc.Answer.value=''">
+            <input id="equal" type="button" value="=" onclick="calc.Answer.value=eval(calc.Answer.value)">
+            <input type="button" id="back" value="X" onclick="cal.Answer.value=">
+        
+        </form>
+        */
+    </script>
+</body>
+</html>
